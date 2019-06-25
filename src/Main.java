@@ -44,12 +44,15 @@ public class Main {
         belarusianSalad.readSaladInfo();
 
         try {
-            Vegetable potatoes = VegetableFactory.createVegetable(VegetableType.VEGETATIVE, "potatoes", 10, 3, 7, 0, true, "no");
-            Vegetable cucumber = VegetableFactory.createVegetable(VegetableType.GENERATIVE, "cucumber", 10, 3, 7, 0, true, "no");
+            Vegetable potatoes = VegetableFactory.createVegetable(VegetableType.VEGETATIVE, "potatoes", 10, 3, 7, 0, true, "big");
+            Vegetable cucumber = VegetableFactory.createVegetable(VegetableType.GENERATIVE, "cucumber", 10, 3, 7, 0, true, "small");
+            Vegetable arugula = VegetableFactory.createVegetable(VegetableType.SMALLSEEDSVEGETABLE, "arugula", 15, 31, 7, 0, true, "no");
 
         }
         catch(NoCaloriesException | NoSuchSeedsSizeException ex) {
             System.out.println(ex.getMessage());
         }
+
+        VegetableFactory.printVegCount();
     }
 }
